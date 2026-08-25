@@ -1,0 +1,91 @@
+/* ---- 圖示配色：亮色 / 暗色皆可辨識 ---- */
+.fig {
+  --fig-bg: #f8fafc;          /* 圖框底色 */
+  --fig-surface: #ffffff;     /* 方塊填色 */
+  --fig-line: #64748b;        /* 線條/輔色 */
+  --fig-text: #1e293b;        /* 文字 */
+  --fig-muted: #64748b;       /* 次要文字 */
+  --fig-primary: #2563eb;     /* 主色 */
+  --fig-primary-soft: #dbeafe;
+  --fig-danger: #dc2626;      /* 警告 */
+  --fig-danger-soft: #fee2e2;
+  --fig-green: #16a34a;
+  --fig-green-soft: #dcfce7;
+  --fig-amber: #d97706;
+  --fig-amber-soft: #fef3c7;
+  --fig-purple: #7c3aed;
+  --fig-purple-soft: #ede9fe;
+  --fig-cyan: #0891b2;
+  --fig-cyan-soft: #cffafe;
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  font-family: system-ui, -apple-system, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+}
+
+.dark .fig {
+  --fig-bg: #1b2432;
+  --fig-surface: #243044;
+  --fig-line: #94a3b8;
+  --fig-text: #e2e8f0;
+  --fig-muted: #a8b3c4;
+  --fig-primary: #60a5fa;
+  --fig-primary-soft: #1e3a5f;
+  --fig-danger: #f87171;
+  --fig-danger-soft: #4c1d1d;
+  --fig-green: #4ade80;
+  --fig-green-soft: #14532d;
+  --fig-amber: #fbbf24;
+  --fig-amber-soft: #4a3209;
+  --fig-purple: #c4b5fd;
+  --fig-purple-soft: #3b2d63;
+  --fig-cyan: #67e8f9;
+  --fig-cyan-soft: #164e63;
+}
+
+.fig text { font-family: system-ui, -apple-system, "Noto Sans TC", "Microsoft JhengHei", sans-serif; }
+
+/* 圖說 */
+.fig-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+  margin-top: -0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+/* 寬表格於手機可橫向捲動 */
+.vp-doc table { display: table; width: 100%; }
+.vp-doc div[class*='table-wrap'] { overflow-x: auto; }
+
+/* 列印用（快速參考卡） */
+@media print {
+  .VPSidebar, .VPNav, .VPLocalNav, .VPDocFooter, .VPFooter, .aside { display: none !important; }
+  .VPDoc { padding: 0 !important; }
+  .VPDoc .container, .VPDoc .content { max-width: 100% !important; margin: 0 !important; }
+}
+
+/* ---- 任務清單（checkbox）---- */
+.vp-doc ul.contains-task-list {
+  list-style: none;
+  padding-left: 0.25rem;
+}
+.vp-doc li.task-list-item {
+  list-style: none;
+  margin-top: 0.35rem;
+}
+.vp-doc li.task-list-item > label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55em;
+  cursor: pointer;
+}
+.vp-doc input.task-list-item-checkbox {
+  width: 1.05em;
+  height: 1.05em;
+  margin: 0.22em 0 0 0;
+  flex: none;
+  accent-color: var(--vp-c-brand-1);
+}
