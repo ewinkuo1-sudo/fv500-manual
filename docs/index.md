@@ -54,3 +54,7 @@ description: 'Olympus FluoView FV500 共軛焦雷射掃描顯微鏡中文使用�
 ::: danger 雷射安全警告
 本系統含 **Class 3B 雷射**。切勿在雷射開啟時移除光路護罩、直視物鏡出光口，或將反光物品（手錶、戒指、金屬工具）置於光路上。
 :::
+
+::: info 參考資料
+軟體操作細節已對照實機畫面與 Olympus 原廠手冊交叉驗證：[FLUOVIEW FV300 User's Manual（原廠 PDF，與 FV500 同一套 FLUOVIEW 軟體）](https://biochimie.umontreal.ca/wp-content/uploads/sites/37/2015/07/FV300UsersManual_E.pdf)、[FV500 User Manual（ManualsLib）](https://www.manualslib.com/manual/895974/Olimpus.html)。如有出入，以現場設備與原廠文件為準。
+:::

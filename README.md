@@ -45,6 +45,15 @@ npm run docs:preview  # 預覽建置結果
 
 推送到 `main` 分支後，由 GitHub Actions 自動建置並發布到 GitHub Pages。
 
+## 參考資料
+
+本說明書的軟體操作細節（按鈕與選單名稱、Hi-Lo LUT 入口、Kalman 設定位置、PMT/Gain 建議、Use C.A 流程、快捷鍵）已對照實機螢幕照片與以下原廠文件交叉驗證：
+
+- [Olympus FLUOVIEW FV300 User's Manual（原廠 PDF，與 FV500 為同一套 FLUOVIEW 軟體）](https://biochimie.umontreal.ca/wp-content/uploads/sites/37/2015/07/FV300UsersManual_E.pdf)
+- [Olympus FLUOVIEW FV500 User Manual（ManualsLib）](https://www.manualslib.com/manual/895974/Olimpus.html)
+
+版權屬 Olympus（現 Evident）所有，故僅附連結、不收錄檔案。
+
 ## 免責聲明
 
 本說明書依實機配置編寫，供實驗室內部教學與操作參考使用。**如與現場設備或原廠文件不符，請以現場設備與 Olympus 原廠手冊為準。**
