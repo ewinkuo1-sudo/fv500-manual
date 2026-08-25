@@ -1,3 +1,7 @@
+---
+description: '.oib 檔案格式、命名規則、資料備份與在 ImageJ/FIJI 開啟的方法'
+---
+
 # 第八章　檔案管理
 
 ::: danger 這一章的重點只有一句話
@@ -158,10 +162,12 @@ YYYYMMDD_樣品_標記_物鏡_條件_序號.oib
 **範例：**
 
 ```
-20260825_HeLa_Tubulin-FITC_DAPI_20X_control_01.oib
-20260825_HeLa_Tubulin-FITC_DAPI_20X_taxol10uM_03.oib
+20260825_HeLa_Tubulin-FITC_20X_control_01.oib
+20260825_HeLa_Tubulin-FITC_20X_taxol10uM_03.oib
 20260825_MouseBrain_GFAP-Cy3_60Xoil_zstack_01.oib
 ```
+
+> 檔名中的標記請只寫**實際以共軛焦通道擷取**的染劑。DAPI 在本機僅限目視觀察、不會出現在 .oib 資料中，寫進檔名反而誤導（見[第9章](/fluorophores)）。
 
 ### 原則
 

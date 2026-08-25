@@ -1,3 +1,7 @@
+---
+description: 'FV500 進階掃描模式：Z-Stack、時間序列、XZ 切面與 Sequential Scan'
+---
+
 # 第六章　進階掃描模式
 
 除了單張 XY 影像，FV500 還能沿 Z 軸堆疊（XYZ）、沿時間軸重複（XYT），或兩者兼具（XYZT）。
@@ -44,7 +48,7 @@ Z-Stack 就是**在同一個 X-Y 位置，沿光軸一層一層地掃描**，把
   <line x1="212" y1="230" x2="212" y2="258" stroke="var(--fig-amber)" stroke-width="2" marker-start="url(#zs-arm2)" marker-end="url(#zs-arm)"/>
   <text x="220" y="250" font-size="11.5" font-weight="600" fill="var(--fig-amber)">Step Size</text>
   <!-- 物鏡 -->
-  <path d="M100 356 L156 356 L146 396 L110 396 Z" fill="var(--fig-primary-soft)" stroke="var(--fig-primary)" stroke-width="2"/>
+  <path d="M110 356 L146 356 L156 396 L100 396 Z" fill="var(--fig-primary-soft)" stroke="var(--fig-primary)" stroke-width="2"/>
   <text x="128" y="418" text-anchor="middle" font-size="11" fill="var(--fig-muted)">物鏡沿 Z 逐層對焦</text>
   <!-- 箭頭 -->
   <line x1="246" y1="230" x2="282" y2="230" stroke="var(--fig-line)" stroke-width="2.4" marker-end="url(#zs-ar)"/>
@@ -216,7 +220,7 @@ XYZT 的總光劑量是 XY 的「層數 × 時間點數」倍。務必把雷射�
 Zoom 越大，同一塊面積接受的雷射劑量越高，**光漂白與光毒性急遽增加**。超過物鏡光學解析極限的 Zoom（過採樣）只是把同樣的資訊放大，並不會看到更多細節。20X 物鏡建議 Zoom 不超過 **4–5×**；要更高倍率請換物鏡。
 :::
 
-## 6.7 Sequential Scan（依序掃描）
+## 6.7 Sequential Scan（依序掃描） {#sequential-scan}
 
 多重染色時，某個染劑的發射光可能被另一個通道收到（bleed-through／串色）。Sequential Scan 讓**每次只開一種雷射**，從根本消除串色。
 

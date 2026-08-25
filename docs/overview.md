@@ -1,3 +1,7 @@
+---
+description: 'Olympus FV500 共軛焦顯微鏡系統概述與共軛焦原理說明'
+---
+
 # 第一章　系統概述
 
 ## 1.1 什麼是共軛焦顯微鏡
@@ -29,7 +33,7 @@
   <text x="76" y="188" text-anchor="middle" font-size="11" fill="var(--fig-muted)">543 / 633 nm</text>
   <line x1="132" y1="172" x2="243" y2="172" stroke="var(--fig-primary)" stroke-width="2.5" marker-end="url(#cf-ar-b)"/>
   <!-- 激發分光鏡 -->
-  <line x1="232" y1="190" x2="268" y2="154" stroke="var(--fig-purple)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="232" y1="154" x2="268" y2="190" stroke="var(--fig-purple)" stroke-width="4" stroke-linecap="round"/>
   <text x="288" y="163" font-size="12.5" fill="var(--fig-text)">激發分光鏡</text>
   <text x="288" y="179" font-size="11" fill="var(--fig-muted)">Excitation Dichroic</text>
   <!-- 上下行方向標示 -->
@@ -56,39 +60,40 @@
   <text x="360" y="396" font-size="12.5" fill="var(--fig-text)">樣品</text>
   <text x="360" y="412" font-size="11" fill="var(--fig-green)">焦平面 Focal Plane</text>
   <text x="150" y="432" font-size="11" fill="var(--fig-muted)">雷射聚焦成一個點，靠振鏡在樣品上逐點掃過整個視野</text>
-  <!-- 上行螢光 -->
-  <line x1="250" y1="168" x2="250" y2="110" stroke="var(--fig-green)" stroke-width="2.5" marker-end="url(#cf-ar-g)"/>
-  <!-- 偵測分光鏡 -->
-  <line x1="232" y1="82" x2="268" y2="118" stroke="var(--fig-purple)" stroke-width="4" stroke-linecap="round"/>
-  <text x="250" y="44" text-anchor="middle" font-size="12.5" fill="var(--fig-text)">偵測分光鏡</text>
-  <text x="250" y="60" text-anchor="middle" font-size="11" fill="var(--fig-muted)">Mirror / DM570 / DM630</text>
-  <!-- 焦平面光線：實線，通過針孔 -->
-  <path d="M268 86 L428 100" stroke="var(--fig-green)" stroke-width="2" fill="none"/>
-  <path d="M268 114 L428 100" stroke="var(--fig-green)" stroke-width="2" fill="none"/>
-  <path d="M436 100 L520 78" stroke="var(--fig-green)" stroke-width="2"/>
-  <path d="M436 100 L520 122" stroke="var(--fig-green)" stroke-width="2"/>
-  <!-- 焦外光線：虛線，被擋住 -->
-  <path d="M268 70 L426 120" stroke="var(--fig-danger)" stroke-width="1.8" stroke-dasharray="6 4" fill="none"/>
-  <path d="M268 132 L426 80" stroke="var(--fig-danger)" stroke-width="1.8" stroke-dasharray="6 4" fill="none"/>
+  <!-- 上行螢光：焦平面光線（實線）會聚於共用針孔 -->
+  <path d="M236 164 L250 121" stroke="var(--fig-green)" stroke-width="2" fill="none"/>
+  <path d="M264 164 L250 121" stroke="var(--fig-green)" stroke-width="2" fill="none"/>
+  <!-- 焦外光線：虛線，在針孔平面已散開而被擋板擋住 -->
+  <path d="M226 164 L260 124" stroke="var(--fig-danger)" stroke-width="1.8" stroke-dasharray="6 4" fill="none"/>
+  <path d="M274 164 L240 124" stroke="var(--fig-danger)" stroke-width="1.8" stroke-dasharray="6 4" fill="none"/>
   <g stroke="var(--fig-danger)" stroke-width="2.4" stroke-linecap="round">
-    <path d="M420 74 L432 86 M432 74 L420 86"/>
-    <path d="M420 114 L432 126 M432 114 L420 126"/>
+    <path d="M254 124 L266 136 M266 124 L254 136"/>
+    <path d="M234 124 L246 136 M246 124 L234 136"/>
   </g>
-  <!-- 針孔擋板 -->
-  <rect x="428" y="36" width="9" height="56" fill="var(--fig-text)"/>
-  <rect x="428" y="108" width="9" height="56" fill="var(--fig-text)"/>
-  <text x="432" y="186" text-anchor="middle" font-size="12.5" fill="var(--fig-text)">針孔 Pinhole</text>
-  <text x="432" y="202" text-anchor="middle" font-size="11" fill="var(--fig-muted)">CONFOCAL APERTURE 1–5</text>
+  <!-- 共用針孔擋板（CH1 / CH2 共用，位於偵測分光鏡之前） -->
+  <rect x="192" y="112" width="50" height="9" fill="var(--fig-text)"/>
+  <rect x="258" y="112" width="50" height="9" fill="var(--fig-text)"/>
+  <text x="184" y="102" text-anchor="end" font-size="12.5" fill="var(--fig-text)">針孔 Pinhole</text>
+  <text x="184" y="118" text-anchor="end" font-size="11" fill="var(--fig-muted)">CONFOCAL APERTURE 1–5</text>
+  <text x="184" y="134" text-anchor="end" font-size="11" fill="var(--fig-muted)">（CH1 / CH2 共用）</text>
+  <!-- 通過針孔的螢光繼續上行 -->
+  <line x1="250" y1="112" x2="250" y2="80" stroke="var(--fig-green)" stroke-width="2.5" marker-end="url(#cf-ar-g)"/>
+  <!-- 偵測分光鏡（位於針孔之後，依波長把螢光分給 CH1 / CH2） -->
+  <line x1="232" y1="92" x2="268" y2="56" stroke="var(--fig-purple)" stroke-width="4" stroke-linecap="round"/>
+  <text x="250" y="26" text-anchor="middle" font-size="12.5" fill="var(--fig-text)">偵測分光鏡</text>
+  <text x="250" y="42" text-anchor="middle" font-size="11" fill="var(--fig-muted)">Mirror / DM570 / DM630</text>
+  <!-- 反射向右進入偵測通道 -->
+  <line x1="258" y1="74" x2="482" y2="74" stroke="var(--fig-green)" stroke-width="2.5" marker-end="url(#cf-ar-g)"/>
   <!-- 阻隔濾片 -->
-  <rect x="490" y="70" width="10" height="60" fill="var(--fig-amber-soft)" stroke="var(--fig-amber)" stroke-width="2"/>
-  <text x="495" y="56" text-anchor="middle" font-size="11" fill="var(--fig-amber)">阻隔濾片</text>
+  <rect x="490" y="44" width="10" height="60" fill="var(--fig-amber-soft)" stroke="var(--fig-amber)" stroke-width="2"/>
+  <text x="495" y="32" text-anchor="middle" font-size="11" fill="var(--fig-amber)">阻隔濾片</text>
   <!-- PMT -->
-  <rect x="520" y="66" width="120" height="68" rx="7" fill="var(--fig-surface)" stroke="var(--fig-primary)" stroke-width="2"/>
-  <text x="580" y="94" text-anchor="middle" font-size="14" font-weight="600" fill="var(--fig-text)">偵測器 PMT</text>
-  <text x="580" y="114" text-anchor="middle" font-size="11" fill="var(--fig-muted)">CH1 / CH2</text>
+  <rect x="520" y="40" width="120" height="68" rx="7" fill="var(--fig-surface)" stroke="var(--fig-primary)" stroke-width="2"/>
+  <text x="580" y="68" text-anchor="middle" font-size="14" font-weight="600" fill="var(--fig-text)">偵測器 PMT</text>
+  <text x="580" y="88" text-anchor="middle" font-size="11" fill="var(--fig-muted)">CH1 / CH2</text>
   <!-- 焦外註解 -->
-  <text x="598" y="182" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--fig-danger)">焦外光線被 pinhole 擋住</text>
-  <path d="M552 174 L448 126" stroke="var(--fig-danger)" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
+  <text x="470" y="170" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--fig-danger)">焦外光線被 pinhole 擋住</text>
+  <path d="M418 162 L272 140" stroke="var(--fig-danger)" stroke-width="1.2" stroke-dasharray="4 3" fill="none"/>
   <!-- 圖例 -->
   <rect x="440" y="252" width="256" height="104" rx="7" fill="var(--fig-surface)" stroke="var(--fig-line)" stroke-opacity="0.6"/>
   <text x="456" y="274" font-size="12" font-weight="600" fill="var(--fig-text)">圖例</text>
@@ -126,7 +131,7 @@
 ## 1.3 FV500 系統特色
 
 - **雙通道同步偵測**　CH1 / CH2 各有獨立 PMT、獨立 Gain / Offset 與可抽換 barrier filter，可同時記錄兩種螢光。
-- **手動共軛焦光圈**　掃描頭前面板的 **CONFOCAL APERTURE** 旋鈕分 1–5 段：段數越小＝pinhole 越小＝光學切片越薄、解析度越高但訊號越弱；段數越大＝訊號越強但切片變厚。
+- **手動共軛焦光圈**　掃描頭前面板的 **CONFOCAL APERTURE** 旋鈕分 1–5 段：段數越小＝pinhole 越小＝光學切片越薄、解析度越高但訊號越弱；段數越大＝訊號越強但切片變厚。段位表詳見[第4章 軟體介面](/software#confocal-aperture)。
 - **多種掃描模式**　XY（單張）、XYZ（Z-Stack）、XYT（時間序列）、XYZT（四維）、XZ（垂直切面）、Line scan。
 - **Sequential Scan**　多種螢光染劑串色時，可設定逐通道／逐幀依序激發，徹底消除 bleed-through。
 - **Kalman／Line 平均**　以多次掃描平均抑制 PMT 雜訊，明顯提升弱訊號影像品質。

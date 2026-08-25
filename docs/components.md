@@ -1,3 +1,7 @@
+---
+description: 'FV500 系統六大組件：電源供應器、雷射、掃描頭、IX71 本體、透射光源與控制電腦'
+---
+
 # 第二章　系統組成
 
 ## 2.1 系統架構總覽
@@ -28,12 +32,15 @@ FV500 系統由**六大部分**組成：電源供應器、雷射光源、掃描�
   <text x="105" y="62" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--fig-text)">FV5-PSU</text>
   <text x="105" y="80" text-anchor="middle" font-size="11" fill="var(--fig-muted)">電源供應器</text>
   <text x="105" y="94" text-anchor="middle" font-size="10.5" fill="var(--fig-amber)">鑰匙開關 + ON/OFF</text>
-  <!-- 電源匯流 -->
-  <path d="M105 100 L105 124 L18 124 L18 322" fill="none" stroke="var(--fig-amber)" stroke-width="2.2"/>
-  <path d="M18 176 L26 176" stroke="var(--fig-amber)" stroke-width="2.2" marker-end="url(#sc-pw)"/>
-  <path d="M18 246 L26 246" stroke="var(--fig-amber)" stroke-width="2.2" marker-end="url(#sc-pw)"/>
-  <path d="M18 316 L26 316" stroke="var(--fig-amber)" stroke-width="2.2" marker-end="url(#sc-pw)"/>
-  <text x="118" y="118" font-size="10.5" fill="var(--fig-amber)">供電</text>
+  <!-- PSU → 掃描頭：供電（粗多芯電纜） -->
+  <path d="M180 70 L384 70 L384 146" fill="none" stroke="var(--fig-amber)" stroke-width="3.2" marker-end="url(#sc-pw)"/>
+  <text x="282" y="62" text-anchor="middle" font-size="10.5" fill="var(--fig-amber)">供電（粗多芯電纜）</text>
+  <!-- PSU → 雷射：安全連鎖訊號 -->
+  <path d="M105 100 L105 124 L18 124 L18 322" fill="none" stroke="var(--fig-primary)" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <path d="M18 176 L26 176" stroke="var(--fig-primary)" stroke-width="1.4" marker-end="url(#sc-sg)"/>
+  <path d="M18 246 L26 246" stroke="var(--fig-primary)" stroke-width="1.4" marker-end="url(#sc-sg)"/>
+  <path d="M18 316 L26 316" stroke="var(--fig-primary)" stroke-width="1.4" marker-end="url(#sc-sg)"/>
+  <text x="118" y="118" font-size="10.5" fill="var(--fig-primary)">連鎖訊號</text>
   <!-- 雷射 -->
   <rect x="30" y="150" width="150" height="52" rx="7" fill="var(--fig-surface)" stroke="var(--fig-green)" stroke-width="2"/>
   <text x="105" y="172" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--fig-text)">HeNe 雷射 543 nm</text>
@@ -140,15 +147,7 @@ FV500 系統由**六大部分**組成：電源供應器、雷射光源、掃描�
 安裝於 IX71 的**側面埠（side port）**，是整套系統的光學核心。
 
 - **振鏡掃描器**　兩片高速擺動反射鏡，分別負責 X 與 Y 方向掃描。
-- **CONFOCAL APERTURE 旋鈕**　前面板的手動 pinhole 調整鈕，共 1–5 段。
-
-  | 段位 | Pinhole | 光學切片 | 訊號強度 | 適用情境 |
-  | --- | --- | --- | --- | --- |
-  | 1 | 最小 | 最薄 | 最弱 | 高解析度、強訊號樣品 |
-  | 2 | 小 | 薄 | 弱 | 一般高品質影像 |
-  | **3** | **中** | **中** | **中** | **建議起始值** |
-  | 4 | 大 | 厚 | 強 | 訊號偏弱的樣品 |
-  | 5 | 最大 | 最厚 | 最強 | 極弱訊號、快速定位 |
+- **CONFOCAL APERTURE 旋鈕**　前面板的手動 pinhole 調整鈕，共 1–5 段：段數越小＝切片越薄、解析度越高但訊號越弱；建議起始值 **3**。完整段位表與操作要點詳見[第4章 軟體介面](/software#confocal-aperture)。
 
 - **偵測分光鏡（Detection DM）**　決定螢光如何分配到 CH1 / CH2：
 

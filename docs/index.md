@@ -26,6 +26,7 @@ features:
   - icon: ⏱️
     title: 時間序列
     details: XYT / XYZT 模式可進行縮時觀察，記錄活細胞動態、鈣離子訊號變化與分子運輸過程。
+description: 'Olympus FluoView FV500 共軛焦雷射掃描顯微鏡中文使用說明書'
 ---
 
 ## 關於本說明書
@@ -46,7 +47,7 @@ features:
 | 安裝環境 | 光學防震桌（麵包板式） |
 
 ::: tip 第一次使用？
-建議依序閱讀 [第1章 系統概述](/overview) → [第2章 系統組成](/components) → [第3章 開關機程序](/power) → [第5章 基本掃描操作](/basic-scan)。
+建議依序閱讀 [第1章 系統概述](/overview) → [第2章 系統組成](/components) → [第3章 開關機程序](/power) → [第4章 軟體介面](/software) → [第5章 基本掃描操作](/basic-scan)（第5章大量使用第4章的介面名詞，如 Channel Setting、Hi-Lo LUT、Kalman）。
 熟悉之後，日常操作只要看 [快速參考卡](/quick-reference) 即可。
 :::
 

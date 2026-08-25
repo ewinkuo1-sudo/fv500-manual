@@ -6,6 +6,10 @@ export default defineConfig({
   description: 'FluoView FV500 共軛焦雷射掃描顯微鏡操作指南',
   lang: 'zh-TW',
   base: '/fv500-manual/',
+  sitemap: {
+    // VitePress 不會把 base 加進 sitemap URL，故 hostname 需含 /fv500-manual/
+    hostname: 'https://ewinkuo1-sudo.github.io/fv500-manual/'
+  },
   head: [
     ['link', { rel: 'icon', href: '/fv500-manual/favicon.svg' }]
   ],
@@ -39,8 +43,8 @@ export default defineConfig({
       {
         text: '附錄',
         items: [
-          { text: '名詞對照表', link: '/glossary' },
-          { text: '快速參考卡', link: '/quick-reference' },
+          { text: '附錄A 名詞對照表', link: '/glossary' },
+          { text: '附錄B 快速參考卡', link: '/quick-reference' },
         ]
       }
     ],

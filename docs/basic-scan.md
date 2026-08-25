@@ -1,3 +1,7 @@
+---
+description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到存檔的完整日常流程'
+---
+
 # 第五章　基本掃描操作
 
 本章是**最常用的日常流程**：從放樣品到存下一張漂亮的共軛焦影像，共六個步驟。
@@ -52,7 +56,7 @@
   <text x="78" y="282" font-size="13.5" font-weight="700" fill="var(--fig-text)">調整訊號</text>
   <text x="44" y="308" font-size="11" fill="var(--fig-muted)">雷射功率 → PMT → Offset</text>
   <text x="44" y="326" font-size="11" fill="var(--fig-muted)">開 Hi-Lo LUT 檢查飽和</text>
-  <text x="44" y="344" font-size="11" fill="var(--fig-muted)">紅點＝過曝　藍點＝全黑</text>
+  <text x="44" y="344" font-size="11" fill="var(--fig-muted)">紅點＝過曝　大片藍＝Offset 過頭</text>
   <text x="44" y="362" font-size="11" fill="var(--fig-amber)">PMT 400–600 V 為佳</text>
   <!-- 5 -->
   <rect x="264" y="242" width="186" height="128" rx="10" fill="var(--fig-surface)" stroke="var(--fig-danger)" stroke-width="2.4"/>
@@ -135,7 +139,9 @@
 
 1. 開啟 **Hi-Lo LUT**（Display → LUT → Hi-Lo）。
 2. 調 PMT，讓**最亮的結構剛好開始出現少量紅點**，然後退回一點點，讓紅點消失。
-3. 調 Offset，讓**背景剛好出現零星藍點**（代表背景已接近全黑但未被截掉）。
+3. 調 Offset，觀察背景的藍點：
+   - 背景出現**零星**藍點 = Offset 調整正確（黑位準在零點附近）。
+   - 背景出現**大片**藍色區域 = Offset 調過頭（弱訊號被截掉），需降低 Offset。
 4. 若對比仍不足，再微調 Gain。
 
 ### Hi-Lo LUT 的判讀
@@ -143,7 +149,8 @@
 | 顯示 | 意義 | 處理 |
 | --- | --- | --- |
 | 🔴 紅色像素 | 已飽和（達最大灰階），資訊永久遺失 | 降 PMT 或降雷射功率 |
-| 🔵 藍色像素 | 為 0（全黑），弱訊號被截掉 | 降低 Offset |
+| 🔵 背景零星藍點 | 黑位準在零點附近，Offset 調整正確 | 保持 |
+| 🔵 大片藍色區域 | Offset 調過頭，弱訊號被截掉 | 降低 Offset |
 | 其他灰階 | 正常範圍 | 保持 |
 
 ::: danger 飽和 = 資料作廢
@@ -177,12 +184,12 @@
 
 4. 按 **XY Once**。
 5. **掃描期間不要碰顯微鏡、桌面或載物台**——防震桌只能擋地面震動，擋不了手推。
-6. 掃描完成後按 Stop 或關閉雷射快門，避免樣品繼續被照。
+6. 掃描完成後按 **Stop** 停止掃描——掃描停止後雷射即不再照射樣品，避免不必要的光漂白。
 
 ## 5.7 步驟六：存檔
 
 1. **File → Save As**，格式選 **.oib**（Olympus Image Binary）。
-2. 檔名建議：`20260825_HeLa_Tub-FITC_DAPI_20X_01.oib`
+2. 檔名建議：`20260825_HeLa_Tub-FITC_20X_01.oib`
 3. 存到指定資料夾（不要存桌面）。
 4. 離開前把整個資料夾複製到 USB 隨身碟或網路磁碟。
 
