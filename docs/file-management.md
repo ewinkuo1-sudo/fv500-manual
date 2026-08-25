@@ -91,7 +91,7 @@ FV500 的原生格式是 **.oib（Olympus Image Binary）**。
 當需要把影像交給不支援 .oib 的軟體時：
 
 1. 開啟要匯出的影像。
-2. **File → Export**（或 Save As，格式選 TIFF）。
+2. 由 **File I/O** 面板匯出（Export，格式選 TIFF；實際選項以現場軟體為準）。
 3. 選項設定：
 
 | 選項 | 建議 |

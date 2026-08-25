@@ -70,8 +70,8 @@ description: 'FV500 一頁式快速參考卡：開關機順序、關鍵參數、
 2. **選擇通道** → 雷射波長 / DM / barrier filter 依染劑設定
 3. **XY Repeat** → 低雷射功率對焦、Zoom + Pan 決定構圖
 4. **調整訊號** → 雷射功率 → PMT → Offset；開 Hi-Lo 檢查
-5. **XY Once** → Scan Size 512、Kalman 3、掃描時不碰桌子
-6. **存檔** → File → Save As → .oib，拍一張存一張
+5. **Once** → Scan Size 512、Kalman 3、掃描時不碰桌子
+6. **存檔** → File I/O 面板 → Save → .oib，拍一張存一張
 :::
 
 ## 關鍵參數速查

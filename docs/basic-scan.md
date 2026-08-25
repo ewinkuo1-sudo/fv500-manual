@@ -63,7 +63,7 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
   <rect x="264" y="242" width="186" height="8" rx="4" fill="var(--fig-danger)"/>
   <circle cx="290" cy="276" r="15" fill="var(--fig-danger)"/>
   <text x="290" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">5</text>
-  <text x="314" y="282" font-size="13.5" font-weight="700" fill="var(--fig-text)">XY Once 正式拍</text>
+  <text x="314" y="282" font-size="13.5" font-weight="700" fill="var(--fig-text)">Once 正式拍</text>
   <text x="280" y="308" font-size="11" fill="var(--fig-muted)">設定 Scan Size 512 或 1024</text>
   <text x="280" y="326" font-size="11" fill="var(--fig-muted)">開啟 Kalman 平均（2–4 次）</text>
   <text x="280" y="344" font-size="11" fill="var(--fig-muted)">掃描期間不要碰桌子</text>
@@ -74,7 +74,7 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
   <circle cx="526" cy="276" r="15" fill="var(--fig-green)"/>
   <text x="526" y="282" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">6</text>
   <text x="550" y="282" font-size="13.5" font-weight="700" fill="var(--fig-text)">存檔</text>
-  <text x="516" y="308" font-size="11" fill="var(--fig-muted)">File → Save As（.oib）</text>
+  <text x="516" y="308" font-size="11" fill="var(--fig-muted)">File I/O → Save（.oib）</text>
   <text x="516" y="326" font-size="11" fill="var(--fig-muted)">命名含日期_樣品_倍率_通道</text>
   <text x="516" y="344" font-size="11" fill="var(--fig-muted)">拍一張存一張，不要累積</text>
   <text x="516" y="362" font-size="11" fill="var(--fig-green)">離開前複製到備份碟</text>
@@ -123,7 +123,7 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
 ## 5.4 步驟三：XY Repeat 對焦
 
 1. 把雷射功率調到**低值**（樣品不怕漂白時再調高）。
-2. 按 **XY Repeat**（或 Focus x2 更快）。
+2. 按 **XY Repeat**（或 **Focus** 更快、更省光漂白）。
 3. 轉 IX71 微調焦鈕，找到影像最銳利的平面。
 4. 用載物台 X / Y 找到想拍的區域。
 5. 需要放大細節時用 **Zoom + Pan**，不必移動載物台。
@@ -137,7 +137,7 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
 
 **調整順序永遠是：雷射功率 → PMT → Offset → （必要時）Gain。**
 
-1. 開啟 **Hi-Lo LUT**（Display → LUT → Hi-Lo）。
+1. 開啟 **Hi-Lo LUT**：畫面左下工具列的 **`<LUT>`** 按鈕 → [Color Tool] → Standard Color LUTs → **Hi-Lo**。
 2. 調 PMT，讓**最亮的結構剛好開始出現少量紅點**，然後退回一點點，讓紅點消失。
 3. 調 Offset，觀察背景的藍點：
    - 背景出現**零星**藍點 = Offset 調整正確（黑位準在零點附近）。
@@ -167,7 +167,7 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
 | 影像顆粒粗 | 開 Kalman 平均、降 PMT、放慢速度 |
 | 兩通道亮度差很多 | 各通道獨立調 PMT，不要用同一組值 |
 
-## 5.6 步驟五：XY Once 正式擷取
+## 5.6 步驟五：Once 正式擷取
 
 1. 設定 **Scan Size**：一般 512×512；要出版／放大檢視用 1024×1024。
 2. 設定 **Speed**：想要更好的訊噪比就放慢，但注意光漂白。
@@ -182,13 +182,13 @@ description: 'FV500 基本掃描六步驟：從放樣品、對焦、調訊號到
 
    > Kalman 是把同一平面掃描多次後平均，雜訊隨次數的平方根下降（平均 4 次 ≈ 雜訊減半）。活細胞或易漂白樣品建議 2 次以內。
 
-4. 按 **XY Once**。
+4. 按 **Once**（Scan Once）。
 5. **掃描期間不要碰顯微鏡、桌面或載物台**——防震桌只能擋地面震動，擋不了手推。
 6. 掃描完成後按 **Stop** 停止掃描——掃描停止後雷射即不再照射樣品，避免不必要的光漂白。
 
 ## 5.7 步驟六：存檔
 
-1. **File → Save As**，格式選 **.oib**（Olympus Image Binary）。
+1. 開啟 **File I/O** 面板 → **Save**，格式選 **.oib**（Olympus Image Binary）。
 2. 檔名建議：`20260825_HeLa_Tub-FITC_20X_01.oib`
 3. 存到指定資料夾（不要存桌面）。
 4. 離開前把整個資料夾複製到 USB 隨身碟或網路磁碟。
