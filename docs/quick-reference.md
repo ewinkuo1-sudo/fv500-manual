@@ -5,6 +5,7 @@ outline: false
 # 快速參考卡
 
 > **Olympus FV500 共軛焦顯微鏡**　·　IX71 本體　·　FLUOVIEW v5.0
+>
 > 本頁設計為一頁列印格式（Ctrl + P → 建議「橫向／符合頁面寬度」）。
 
 ## 開關機順序
